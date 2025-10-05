@@ -1,12 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TaskType } from './task.model';
-import { Card } from "../../shared/card/card";
-import { DatePipe } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { TaskService } from '../tasks.service';
+import { TaskType } from './task.model';
 
+// Since Task component is not a standalone component and declared in root AppModule, there is no
+// need to import Card component here, because SharedModule is already imported in root AppModule.. 
 @Component({
   selector: 'app-task',
-  imports: [Card, DatePipe],
+  standalone: false,
   templateUrl: './task.html',
   styleUrl: './task.css'
 })

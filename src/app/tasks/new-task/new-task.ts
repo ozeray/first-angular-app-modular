@@ -2,6 +2,7 @@ import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../tasks.service';
 
+// NewTask component is left as standalone just to show how can import FormsModule in a standalone component..
 @Component({
   selector: 'app-new-task',
   imports: [FormsModule],
