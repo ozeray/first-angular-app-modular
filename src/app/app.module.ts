@@ -1,4 +1,4 @@
-import { NgModule, provideZonelessChangeDetection } from "@angular/core";
+import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -12,7 +12,7 @@ import { TasksModule } from "./tasks/tasks.module";
 @NgModule({
     bootstrap: [App],
     declarations: [App, HeaderComp],
-    providers: [provideZonelessChangeDetection()],
+    providers: [provideZonelessChangeDetection(), provideBrowserGlobalErrorListeners()],
     imports: [FormsModule, User, TasksModule, BrowserModule, SharedModule] 
     // User component left as standalone just to show how we import it in "module" style, not in declarations.    
 }) 
